@@ -3,6 +3,16 @@ $text_white: #fff;
 $text_bold: bold;
 $text_aqua: aqua;
 $Size_20px: 16px + 2px*2;
+$color_fuchsia: fuchsia;
+
+$one: 30px;
+$two: 2;
+$cont: content;
+
+$color1: rgba(100,250,220,0.75) + rgba(100,250,100,0.75);
+$color2: #44aa03 + #99aa03;
+$color3: #44aa03*2;
+
 
 
 body {
@@ -16,4 +26,76 @@ h1	{
 }
 p {
 	font-size: $Size_20px;
+	span {
+		font-size:$Size_20px + 10px;
+		color: $text_aqua;
+	}
+	a {
+	font-size:$Size_20px*2;	
+	color: black;
+	}
+
+	a:hover {
+	text-decoration:none;
+	color: pink;
+	border: 2px solid black;
+	font-size:$Size_20px*2-6px;
+	background:black;	
+
+	}
+}
+
+.main {
+	width: 900px;
+	$h3_color: red  !global;
+	h3 {
+		color:$h3_color;
+	}
+	p {
+	 color: grey;
+	 font: {
+	 family: Verdana;
+	 size: 24px;
+	 weight: bold;
+	 }
+	 span {
+	 	color: $color_fuchsia;
+	 }
+	}
+	a {
+	 color: pink;
+					&:hover {
+	 color:$text_white;
+	 text-decoration:none;
+	 background:black;
+	 font-size:$Size_20px;
+	 padding: 10px;
+	}
+	}
+}
+
+.main2 {
+	h3 {
+	color:$h3_color;
+	}
+	p {
+	 background: $color1; 
+	}
+	span {
+		color: $color2; 
+	}
+	.second_span {
+	color: $color3;
+	}
+	.first_span {
+	color:$color1 / 2.8;
+	}
+	padding: {
+		top: $one + 200;
+		bottom: $one / 2;
+		left: $one * 3;
+		right: 243px - 231px;
+
+	}
+	#{$cont}: "conter" + "trike";
 }
