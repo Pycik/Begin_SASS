@@ -1,0 +1,19 @@
+$bg_color: green;
+$text_white: #fff;
+$text_bold: bold;
+$text_aqua: aqua;
+$Size_20px: 16px + 2px*2;
+
+
+body {
+	background: $bg_color;
+	color: $text_white;
+}
+
+h1	{
+	font-weight: $text_bold;
+	color: $text_aqua;
+}
+p {
+	font-size: $Size_20px;
+}
