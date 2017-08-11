@@ -13,7 +13,22 @@ $color1: rgba(100,250,220,0.75) + rgba(100,250,100,0.75);
 $color2: #44aa03 + #99aa03;
 $color3: #44aa03*2;
 
+@mixin text_base {
+	font:{
+	family: Arial;
+	size: 45px;
+	weight: bold;
+	}
+	color: yellow;
+}
 
+@mixin border_text($color, $width:5px) {
+	border:{
+	color:$color;
+	width:$width;
+	style:dotted;
+	}
+}
 
 body {
 	background: $bg_color;
@@ -75,6 +90,11 @@ p {
 }
 
 .main2 {
+	h1 {
+	@include text_base;
+	text-transform: uppercase;
+	border: 1px dotted $color2;
+	}
 	h3 {
 	color:$h3_color;
 	}
@@ -99,3 +119,39 @@ p {
 	}
 	#{$cont}: "conter" + "trike";
 }
+
+.main3 {
+	h1{
+	@include text_base;
+	border: {
+		top: 10px solid $color1 / 2;
+		bottom: 10px  solid $color2 / 2;
+	}
+	margin: {
+		left: $Size_20px * 4;
+		right: 550px;
+	}
+	}
+	span {
+		color: $color3 / 2;
+		&:hover {
+		color: $color2;
+	}
+	} 
+	p{
+		@include border_text($color3);
+	}
+	.error {
+		color:red;
+		border: 3px dotted aqua;
+		background: $color2 / 2.5;
+	}
+	.critical {
+	@extend .error;
+		font: {
+		size: 40px;s
+	}
+	}
+
+}
+

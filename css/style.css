@@ -69,6 +69,15 @@ p a:hover {
   content: "contertrike";
 }
 
+.main2 h1 {
+  font-family: Arial;
+  font-size: 45px;
+  font-weight: bold;
+  color: yellow;
+  text-transform: uppercase;
+  border: 1px dotted #ddff06;
+}
+
 .main2 h3 {
   color: red;
 }
@@ -87,4 +96,39 @@ p a:hover {
 
 .main2 .first_span {
   color: rgba(71, 179, 114, 0.75);
+}
+
+.main3 h1 {
+  font-family: Arial;
+  font-size: 45px;
+  font-weight: bold;
+  color: yellow;
+  border-top: 10px solid rgba(100, 250, 160, 0.75);
+  border-bottom: 10px solid #6faa03;
+  margin-left: 80px;
+  margin-right: 550px;
+}
+
+.main3 span {
+  color: #44aa03;
+}
+
+.main3 span:hover {
+  color: #ddff06;
+}
+
+.main3 p {
+  border-color: #88ff06;
+  border-width: 5px;
+  border-style: dotted;
+}
+
+.main3 .error, .main3 .critical {
+  color: red;
+  border: 3px dotted aqua;
+  background: #588802;
+}
+
+.main3 .critical {
+  font-size: 40px;
 }
